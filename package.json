@@ -1,0 +1,31 @@
+{
+  "name": "anthony-website-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development postcss src/css/main.css -o assets/css/theme.css --watch",
+    "build": "cross-env NODE_ENV=production postcss src/css/main.css -o assets/css/theme.css",
+    "copy-libs": "node scripts/copy-libs.js",
+    "setup": "pnpm install && npm run copy-libs"
+  },
+  "keywords": [],
+  "author": "Rakesh Mandal",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@swup/fade-theme": "^2.0.1",
+    "@swup/scroll-plugin": "^3.3.2",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "swup": "^4.8.1"
+  }
+}
